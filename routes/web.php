@@ -25,3 +25,7 @@ Route::group(['middleware' => 'login'], function () {
     Route::get('/cetak', [AdminController::class, 'cetakLaporan'])->name('cetak');
     Route::get('/end_session', [AutentikasiController::class, 'logout'])->name('end_session');
 });
+
+Route::get('/', function () {
+    return view('frontend.page-starter');
+});
