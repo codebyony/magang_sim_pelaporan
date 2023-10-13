@@ -27,7 +27,6 @@
         <script src="assets/back/js/jquery.dataTables.js"></script>
         <link type="text/css" href="//gyrocode.github.io/jquery-datatables-checkboxes/1.2.12/css/dataTables.checkboxes.css" rel="stylesheet" />
 <script type="text/javascript" src="//gyrocode.github.io/jquery-datatables-checkboxes/1.2.12/js/dataTables.checkboxes.min.js"></script>
-        @include('Rapat.modal_control')
     </head>
 
     <body data-layout="horizontal" data-topbar="dark">
@@ -464,7 +463,6 @@
 
         <!-- Right bar overlay-->
         <div class="rightbar-overlay"></div>
-        @include('Karyawan.modal_control')
         <!-- JAVASCRIPT -->
         <script src="assets/back/libs/metismenujs/metismenujs.min.js"></script>
         <script src="assets/back/libs/simplebar/simplebar.min.js"></script>

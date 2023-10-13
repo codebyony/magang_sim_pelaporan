@@ -38,11 +38,11 @@ class AutentikasiController extends Controller
                 return redirect('/dashboard');
             }
             //jika password salah
-            return redirect('/auth')->with('error_password', 'Password Tidak Sesuai');
+            return redirect('/login')->with('error_password', 'Password Tidak Sesuai');
         }
         
         //jika username tidak ada
-        return redirect('/auth')->with('error_username', 'Username Tidak Ditemukan');
+        return redirect('/login')->with('error_username', 'Username Tidak Ditemukan');
         // $credentials = $request->only('NIP', 'password');
         // if (Auth::attempt($credentials)) {
         //     // Authentication passed...

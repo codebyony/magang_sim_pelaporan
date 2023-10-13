@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AutentikasiController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +17,7 @@ use App\Http\Controllers\AutentikasiController;
 
 // ADMINISTRATOR
 Route::get('/login', [AutentikasiController::class, 'index'])->name('login');
-Route::post('/store', [AutentikasiController::class, 'store'])->name('store');
+Route::post('/auth', [AutentikasiController::class, 'store'])->name('auth');
 Route::get('/logout', [AutentikasiController::class, 'logoutPage'])->name('logout');
 
 Route::group(['middleware' => 'login'], function () {

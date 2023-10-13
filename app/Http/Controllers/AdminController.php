@@ -13,7 +13,8 @@ class AdminController extends Controller
     // Buka Halaman Login
     public function index(){
         return view('Laporan.laporan',[
-            'title' => 'Laporan Karyawan'
+            'judul' => 'Laporan Karyawan',
+            'item' => Laporan::all(),
         ]);
     }
 

@@ -59,4 +59,4 @@
 </div>
 <!-- end row -->
 <!-- end row --> 
-@include('Rapat.modal_add') @endsection
+@endsection

@@ -33,7 +33,7 @@
 
                        <div class="text-center mb-4">
                             <a href="index.html">
-                                <img src="assets/back/images/logo-sm.svg" alt="" height="22"> <span class="logo-txt">Activ</span>
+                                <img src="assets/back/images/logo-sm.svg" alt="" height="22"> <span class="logo-txt">Lapor</span>
                             </a>
                        </div>
 
@@ -41,23 +41,9 @@
                             <div class="card-body p-4"> 
                                 <div class="text-center mt-2">
                                     <h5 class="text-primary">Welcome Back !</h5>
-                                    <p class="text-muted">Sign in to continue to Activ.</p>
+                                    <p class="text-muted">Sign in to continue to Lapor.</p>
                                 </div>
                                 <div class="p-2 mt-4">
-                                    @if(session()->get('registrasi_success'))
-                                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                        <i class="mdi mdi-check-all me-2"></i>
-                                        {{ session()->get('registrasi_success') }}
-                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                    </div>
-                                    @endif
-                                    @if(session()->get('delete_success'))
-                                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                        <i class="mdi mdi-check-all me-2"></i>
-                                        {{ session()->get('delete_success') }}
-                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                    </div>
-                                    @endif
                                     @if(session()->get('error_username'))
                                     <div class="alert alert-danger alert-dismissible fade show" role="alert">
                                         <i class="mdi mdi-block-helper me-2"></i>
@@ -75,9 +61,9 @@
                                     <form method="POST" action="/auth"> @csrf
         
                                         <div class="mb-3">
-                                            <label class="form-label" for="username">NIP</label>
-                                            <input type="text" class="form-control" name="NIP" placeholder="Enter username">
-                                            @error('NIP')
+                                            <label class="form-label" for="username">Username</label>
+                                            <input type="text" class="form-control" name="username" placeholder="Enter username">
+                                            @error('username')
                                             <code>
                                                 {{ $message }}
                                             </code>
@@ -99,10 +85,6 @@
 
                                         <div class="mt-3 text-end">
                                             <input class="btn btn-primary w-sm waves-effect waves-light" type="submit" value="Log In">
-                                        </div>
-
-                                        <div class="mt-4 text-center">
-                                            <p class="mb-0">Don't have an account ? <a href="/auth/create" class="fw-medium text-primary"> Signup now </a> </p>
                                         </div>
                                     </form>
                                 </div>
