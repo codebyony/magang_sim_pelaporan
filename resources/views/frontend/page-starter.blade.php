@@ -291,17 +291,22 @@
                 <input type="file" id="input-file-now" class="file-upload" />
             </div> --}}
             <div class="form-row ">
-                <div class="custom-control custom-checkbox col-lg-1">
-                    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
-                    <label class="custom-control-label" for="defaultUnchecked">Normal</label>
-                </div> <br>
-                <div class="custom-control custom-checkbox col-lg-1">
-                    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
-                    <label class="custom-control-label" for="defaultUnchecked">Anonim</label>
-                </div> <br>
-                <div class="custom-control custom-checkbox col-lg-1">
-                    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
-                    <label class="custom-control-label" for="defaultUnchecked">Privat</label>
+                <!-- Default inline 1-->
+                <div class="custom-control custom-checkbox custom-control-inline">
+                    <input type="checkbox" class="custom-control-input" id="defaultInline1">
+                    <label class="custom-control-label" for="defaultInline1">Normal</label>
+                </div>
+                
+                <!-- Default inline 2-->
+                <div class="custom-control custom-checkbox custom-control-inline">
+                    <input type="checkbox" class="custom-control-input" id="defaultInline2">
+                    <label class="custom-control-label" for="defaultInline2">Anonim</label>
+                </div>
+                
+                <!-- Default inline 3-->
+                <div class="custom-control custom-checkbox custom-control-inline">
+                    <input type="checkbox" class="custom-control-input" id="defaultInline3">
+                    <label class="custom-control-label" for="defaultInline3">Private</label>
                 </div>
             </div>
             <div class="btn-box">
