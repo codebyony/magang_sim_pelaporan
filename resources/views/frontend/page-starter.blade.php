@@ -259,11 +259,9 @@
             </h4>
             <div class="form-row ">
               <div class="form-group col-lg-12">
-                {{-- <label for="inputPatientName">Patient Name </label> --}}
                 <input type="text" class="form-control" id="inputPatientName" placeholder="Masukkan Nama">
               </div>
               <div class="form-group col-lg-12">
-                {{-- <label for="inputPatientName">Patient Name </label> --}}
                 <input type="text" class="form-control" id="inputPatientName" placeholder="Masukkan Nip">
               </div>
               <div class="form-group col-lg-12">
@@ -284,26 +282,20 @@
             <div class="form-row">
                 <div class="form-group col-lg-12">
                     <textarea name="" id="inputPatientName" rows="3" class="form-control" placeholder="Ketikkan Keluhan Anda"></textarea>
-                    {{-- <input type="text" class="form-control" id="inputPatientName" placeholder="Ketikkan Keluhan Anda"> --}}
                 </div>
             </div>
             {{-- <div class="file-upload-wrapper">
                 <input type="file" id="input-file-now" class="file-upload" />
             </div> --}}
             <div class="form-row ">
-                <!-- Default inline 1-->
                 <div class="custom-control custom-checkbox custom-control-inline">
                     <input type="checkbox" class="custom-control-input" id="defaultInline1">
                     <label class="custom-control-label" for="defaultInline1">Normal</label>
                 </div>
-                
-                <!-- Default inline 2-->
                 <div class="custom-control custom-checkbox custom-control-inline">
                     <input type="checkbox" class="custom-control-input" id="defaultInline2">
                     <label class="custom-control-label" for="defaultInline2">Anonim</label>
                 </div>
-                
-                <!-- Default inline 3-->
                 <div class="custom-control custom-checkbox custom-control-inline">
                     <input type="checkbox" class="custom-control-input" id="defaultInline3">
                     <label class="custom-control-label" for="defaultInline3">Private</label>
