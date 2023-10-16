@@ -673,7 +673,7 @@
       <div class="info_top">
         <div class="info_logo">
           <a href="">
-            <img src="images/logo.png" alt="">
+            <img src="assets/images/logo.png" alt="">
           </a>
         </div>
         <div class="info_form">
@@ -760,7 +760,7 @@
               </h5>
               <div class="post_box">
                 <div class="img-box">
-                  <img src="images/post1.jpg" alt="">
+                  <img src="assets/images/post1.jpg" alt="">
                 </div>
                 <p>
                   Normal
@@ -769,7 +769,7 @@
               </div>
               <div class="post_box">
                 <div class="img-box">
-                  <img src="images/post2.jpg" alt="">
+                  <img src="assets/images/post2.jpg" alt="">
                 </div>
                 <p>
                   Normal
@@ -785,7 +785,7 @@
               </h5>
               <div class="post_box">
                 <div class="img-box">
-                  <img src="images/post3.jpg" alt="">
+                  <img src="assets/images/post3.jpg" alt="">
                 </div>
                 <p>
                   Normal
@@ -794,7 +794,7 @@
               </div>
               <div class="post_box">
                 <div class="img-box">
-                  <img src="images/post4.png" alt="">
+                  <img src="assets/images/post4.png" alt="">
                 </div>
                 <p>
                   Normal
