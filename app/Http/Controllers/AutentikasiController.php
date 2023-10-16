@@ -12,7 +12,7 @@ class AutentikasiController extends Controller
 {
     // Buka Halaman Login
     public function index(){
-        return view('Autentikasi.login',[
+        return view('backend.Autentikasi.login',[
             'title' => 'Halaman Login'
         ]);
     }
@@ -59,7 +59,7 @@ class AutentikasiController extends Controller
 
     // Buka Halaman Login
     public function logoutPage(){
-        return view('Autentikasi.logout',[
+        return view('backend.Autentikasi.logout',[
             'title' => 'Halaman Logout'
         ]);
     }

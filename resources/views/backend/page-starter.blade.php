@@ -2,31 +2,35 @@
 <html lang="en">
 
     
-<!-- Mirrored from themesdesign.in/MR. Rapat-laravel/layouts/pages-starter.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 04 Jul 2022 07:12:08 GMT -->
+<!-- Mirrored from themesdesign.in/Activ-laravel/layouts/pages-starter.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 04 Jul 2022 07:12:08 GMT -->
 <head>
         
         <meta charset="utf-8" />
         <title>{{ $judul }}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta content="Premium Multipurpose Admin & rapat Template" name="description" />
+        <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesbrand" name="author" />
         <!-- App favicon -->
         <link rel="shortcut icon" href="assets/back/images/favicon.ico">
 
-        <!-- Bootstrap Css -->
-        <link href="{{asset('assets/back/css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet" type="text/css" />
-        <!-- Icons Css -->
-        <link href="assets/back/css/icons.min.css" rel="stylesheet" type="text/css" />
-        <!-- App Css-->
-        <link href="assets/back/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
         
-        <script src="assets/back/js/jquery_3.6.4_jquery.min.js"></script>
-        <script src="assets/back/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-        {{-- Datatable  --}}
-        <link rel="stylesheet" href="assets/back/css/jquery.dataTables.css" />
-        <script src="assets/back/js/jquery.dataTables.js"></script>
-        <link type="text/css" href="//gyrocode.github.io/jquery-datatables-checkboxes/1.2.12/css/dataTables.checkboxes.css" rel="stylesheet" />
-<script type="text/javascript" src="//gyrocode.github.io/jquery-datatables-checkboxes/1.2.12/js/dataTables.checkboxes.min.js"></script>
+        <!-- alertifyjs Css -->
+        <link href="assets/back/libs/alertifyjs/build/css/alertify.min.css" rel="stylesheet" type="text/css" />
+
+        <!-- alertifyjs default themes  Css -->
+        <link href="assets/back/libs/alertifyjs/build/css/themes/default.min.css" rel="stylesheet" type="text/css" />
+
+        <!-- Bootstrap Css -->
+        <link href="{{ asset('assets/back/css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet" type="text/css" />
+        <!-- Icons Css -->
+        <link href="{{ asset('assets/back/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
+        <!-- App Css-->
+        <link href="{{ asset('assets/back/css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css" />
+        <style>
+        table tr {
+            cursor: pointer;
+        }
+        </style>
     </head>
 
     <body data-layout="horizontal" data-topbar="dark">
@@ -42,19 +46,19 @@
                         <div class="navbar-brand-box">
                             <a href="index.html" class="logo logo-dark">
                                 <span class="logo-sm">
-                                    <img src="assets/back/images/logo-sm.svg" alt="" height="22">
+                                    <img src="{{ asset('assets/back/images/logo-sm.svg') }}" alt="" height="22">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="assets/back/images/logo-sm.svg" alt="" height="22"> <span class="logo-txt">MR. Rapat</span>
+                                    <img src="{{ asset('assets/back/images/logo-sm.svg') }}" alt="" height="22"> <span class="logo-txt">Activ</span>
                                 </span>
                             </a>
 
                             <a href="index.html" class="logo logo-light">
                                 <span class="logo-sm">
-                                    <img src="assets/back/images/logo-sm.svg" alt="" height="22">
+                                    <img src="{{ asset('assets/back/images/logo-sm.svg') }}" alt="" height="22">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="assets/back/images/logo-sm.svg" alt="" height="22"> <span class="logo-txt">MR. Rapat</span>
+                                    <img src="{{ asset('assets/back/images/logo-sm.svg') }}" alt="" height="22"> <span class="logo-txt">Activ</span>
                                 </span>
                             </a>
                 
@@ -78,7 +82,7 @@
                         <div class="dropdown d-inline-block">
                             <button type="button" class="btn header-item user text-start d-flex align-items-center" id="page-header-user-dropdown"
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img class="rounded-circle header-profile-user" src="assets/back/images/users/avatar-1.jpg"
+                                <img class="rounded-circle header-profile-user" src="{{ asset('assets/back/images/users/avatar-1.jpg') }}"
                                 alt="Header Avatar">
                             </button>
                             <div class="dropdown-menu dropdown-menu-end pt-0">
@@ -100,19 +104,19 @@
                 <div class="navbar-brand-box">
                     <a href="index.html" class="logo logo-dark">
                         <span class="logo-sm">
-                            <img src="assets/back/images/logo-sm.svg" alt="" height="22"> 
+                            <img src="{{ asset('assets/back/images/logo-sm.svg') }}" alt="" height="22"> 
                         </span>
                         <span class="logo-lg">
-                            <img src="assets/back/images/logo-sm.svg" alt="" height="22"> <span class="logo-txt">MR. Rapat</span>
+                            <img src="{{ asset('assets/back/images/logo-sm.svg') }}" alt="" height="22"> <span class="logo-txt">Activ</span>
                         </span>
                     </a>
 
                     <a href="index.html" class="logo logo-light">
                         <span class="logo-lg">
-                            <img src="assets/back/images/logo-sm.svg" alt="" height="22"> <span class="logo-txt">MR. Rapat</span>
+                            <img src="{{ asset('assets/back/images/logo-sm.svg') }}" alt="" height="22"> <span class="logo-txt">Activ</span>
                         </span>
                         <span class="logo-sm">
-                            <img src="assets/back/images/logo-sm.svg" alt="" height="22">
+                            <img src="{{ asset('assets/back/images/logo-sm.svg') }}" alt="" height="22">
                         </span>
                     </a>
                 </div>
@@ -130,45 +134,12 @@
                             <li class="menu-title" data-key="t-menu">Menu</li>
 
                             <li>
-                                <a href="/dashbord">
+                                <a href="index.html">
                                     <i class="bx bx-tachometer icon nav-icon"></i>
-                                    <span class="menu-item" data-key="t-dashboards">Dashbord</span>
+                                    <span class="menu-item" data-key="t-dashboards">Laporan</span>
                                 </a>
                             </li>
-                            <li class="menu-title" data-key="t-pages">Applications</li>
-                            <li>
-                                <a href="/akun">
-                                    <i class="bx bx-user icon nav-icon"></i>
-                                    <span class="menu-item" data-key="t-akun">Akun</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/rapat">
-                                    <i class="bx bx-file icon nav-icon"></i>
-                                    <span class="menu-item" data-key="t-rapat">Rapat</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript: void(0);" class="has-arrow">
-                                    <i class="bx bx-user-circle icon nav-icon"></i>
-                                    <span class="menu-item" data-key="t-utility">Account</span>
-                                </a>
-                                <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="/absensi" data-key="t-starter-page">Absensi</a></li>
-                                    <li><a href="/karyawan" data-key="t-karyawan">Karyawan</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="javascript: void(0);" class="has-arrow">
-                                    <i class="bx bx-receipt icon nav-icon"></i>
-                                    <span class="menu-item" data-key="t-Invoice">Invoice</span>
-                                </a>
-                                <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="/undangan" data-key="t-undangan">Undangan</a></li>
-                                    <li><a href="/materi" data-key="t-materi">Materi</a></li>
-                                    <li><a href="/notulen" data-key="t-notulen">Notulensi</a></li>
-                                </ul>
-                            </li>
+
                         </ul>
                     </div>
                     <!-- Sidebar -->
@@ -182,19 +153,19 @@
                         <div class="navbar-brand-box">
                             <a href="index.html" class="logo logo-dark">
                                 <span class="logo-sm">
-                                    <img src="assets/back/images/logo-sm.svg" alt="" height="22">
+                                    <img src="{{ asset('assets/back/images/logo-sm.svg') }}" alt="" height="22">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="assets/back/images/logo-sm.svg" alt="" height="22"> <span class="logo-txt">MR. Rapat</span>
+                                    <img src="{{ asset('assets/back/images/logo-sm.svg') }}" alt="" height="22"> <span class="logo-txt">Activ</span>
                                 </span>
                             </a>
 
                             <a href="index.html" class="logo logo-light">
                                 <span class="logo-sm">
-                                    <img src="assets/back/images/logo-sm.svg" alt="" height="22">
+                                    <img src="{{ asset('assets/back/images/logo-sm.svg') }}" alt="" height="22">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="assets/back/images/logo-sm.svg" alt="" height="22"> <span class="logo-txt">MR. Rapat</span>
+                                    <img src="{{ asset('assets/back/images/logo-sm.svg') }}" alt="" height="22"> <span class="logo-txt">Activ</span>
                                 </span>
                             </a>
                         </div>
@@ -212,45 +183,10 @@
                                             <a class="nav-link dropdown-toggle arrow-none" href="/dashboard" id="topnav-dashboard" role="button"
                                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <i class='bx bx-tachometer'></i>
-                                                <span data-key="t-dashboards">Dashbord</span>
+                                                <span data-key="t-dashboards">Laporan</span>
                                             </a>
                                         </li>
-                                        <li class="nav-item" {{ (session()->get('divisi') == 'Administrator')?'style=display:block':'style=display:none' }}>
-                                            <a class="nav-link dropdown-toggle arrow-none" href="/akun" id="topnav-rapat" role="button"
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class='bx bx-user icon nav-icon'></i>
-                                                <span data-key="t-rapat">Akun</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link dropdown-toggle arrow-none" href="/rapat" id="topnav-rapat" role="button"
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class='bx bx-file icon nav-icon'></i>
-                                                <span data-key="t-rapat">Rapat</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-pages" role="button">
-                                                <i class='bx bx-user-circle icon nav-icon'></i>
-                                                <span data-key="t-account">Account</span> <div class="arrow-down"></div>
-                                            </a>
-                                            <div class="dropdown-menu" aria-labelledby="topnav-pages">
-                                                <a href="/absensi" class="dropdown-item" data-key="t-Absensi">Absensi</a>
-                                                <a href="/karyawan" class="dropdown-item" data-key="t-karyawan">Karyawan</a>
-                                            </div>
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-pages" role="button">
-                                                <i class='bx bx-receipt icon nav-icon'></i>
-                                                <span data-key="t-utility">Utility</span> <div class="arrow-down"></div>
-                                            </a>
-                                            <div class="dropdown-menu" aria-labelledby="topnav-pages">
-    
-                                                <a href="/undangan" class="dropdown-item" data-key="t-undangan">Undangan</a>
-                                                <a href="/materi" class="dropdown-item" data-key="t-materi">Materi</a>
-                                                <a href="/notulensi" class="dropdown-item" data-key="t-notulen">Notulensi</a>
-                                            </div>
-                                        </li>
+        
                                     </ul>
                                 </div>
                             </nav>
@@ -269,7 +205,7 @@
                         <div class="dropdown d-inline-block">
                             <button type="button" class="btn header-item user text-start d-flex align-items-center" id="page-header-user-dropdown"
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img class="rounded-circle header-profile-user" src="assets/back/images/users/avatar-1.jpg"
+                                <img class="rounded-circle header-profile-user" src="{{ asset('assets/back/images/users/avatar-1.jpg') }}"
                                 alt="Header Avatar">
                             </button>
                             <div class="dropdown-menu dropdown-menu-end pt-0">
@@ -295,7 +231,13 @@
                 <div class="page-content">
                     <div class="container-fluid">
 
-                        @yield('isi')
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                @yield('isi')
+                            </div>
+                        </div>
+                        <!-- end page title -->
                         
                     </div> <!-- container-fluid -->
                 </div>
@@ -305,7 +247,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-sm-6">
-                                <script>document.write(new Date().getFullYear())</script> &copy; MR. Rapat.
+                                <script>document.write(new Date().getFullYear())</script> &copy; Activ.
                             </div>
                             <div class="col-sm-6">
                                 <div class="text-sm-end d-none d-sm-block">
@@ -463,25 +405,66 @@
 
         <!-- Right bar overlay-->
         <div class="rightbar-overlay"></div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        
+        
+        {{-- Datatable  --}}
+        <link rel="stylesheet" href="assets/back/css/jquery.dataTables.css" />
+        <script src="assets/back/js/jquery.dataTables.js"></script>
+        <!-- alertifyjs js -->
+        <script src="assets/back/libs/alertifyjs/build/alertify.min.js"></script>
         <!-- JAVASCRIPT -->
-        <script src="assets/back/libs/metismenujs/metismenujs.min.js"></script>
-        <script src="assets/back/libs/simplebar/simplebar.min.js"></script>
-        <script src="assets/back/libs/feather-icons/feather.min.js"></script>
-        <!-- gridjs js -->
-        <script src="assets/back/libs/gridjs/gridjs.umd.js"></script>
-        {{-- <script src="assets/back/js/rapat/rapat.init.js"></script> --}}
-        {{-- <script src="assets/back/js/karyawan/karyawan.init.js"></script> --}}
-        <script src="assets/back/js/materi/materi.init.js"></script>
-        <script src="assets/back/js/notulensi/notulensi.init.js"></script>
+        <script src="{{ asset('assets/back/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ asset('assets/back/libs/metismenujs/metismenujs.min.js') }}"></script>
+        <script src="{{ asset('assets/back/libs/simplebar/simplebar.min.js') }}"></script>
+        <script src="{{ asset('assets/back/libs/feather-icons/feather.min.js') }}"></script>
 
-        <script src="assets/back/js/pages/form-wizard.init.js"></script>
-        <script src="assets/back/js/app.js"></script>
+        <script src="{{ asset('assets/back/js/app.js') }}"></script>
         <script type="text/javascript">
-        $(document).ready( function () {
-            $('.dataTabel').DataTable();
-        } );
+            $(document).ready( function () {
+                var successMessage = "{{ session('success_message') }}";
+                
+                if (successMessage) {
+                    alertify.message("Berhasil Diverifikasi");
+                }
+                
+                document.querySelector("a#verifikasi").addEventListener("click", function(event) {
+                    event.stopPropagation(); // Prevent the click event from propagating to the parent tr
+                });
+
+                $('.dataTabel').DataTable();
+
+                $(document).on("click", "table tbody tr", function(e) {
+                    var item = $(e.currentTarget);
+                    var NIP = item.data("nip");
+                    var nama_karyawan = item.data("nama_karyawan");
+                    var divisi = item.data("divisi");
+                    var judul = item.data("judul");
+                    var isi = item.data("isi");
+                    var kategori = item.data("kategori");
+                    var lampiran = item.data("lampiran");
+                    var nomor_wa = item.data("nomor_wa");
+                    var sifat = item.data("sifat");
+                    var status = item.data("status");
+                    var lampiran = item.data("lampiran");
+
+                    $('#nip').html(NIP);
+                    $('#nama_karyawan').html(nama_karyawan);
+                    $('#divisi').html(divisi);
+                    $('#judul').html(judul);
+                    $('#isi').html(isi);
+                    $('#kategori').html(kategori);
+                    $('#lampiran').attr("src", lampiran);
+                    $('#nomor_wa').html(nomor_wa);
+                    $('#sifat').html(sifat);
+                    $('#status').html(status);
+                    $('#lampiran').html(lampiran);
+                    $('#modalDetail').modal("show");
+                })
+            });
         </script>
+
     </body>
 
-<!-- Mirrored from themesdesign.in/MR. Rapat-laravel/layouts/pages-starter.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 04 Jul 2022 07:12:08 GMT -->
+<!-- Mirrored from themesdesign.in/Activ-laravel/layouts/pages-starter.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 04 Jul 2022 07:12:08 GMT -->
 </html>

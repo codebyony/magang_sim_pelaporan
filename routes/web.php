@@ -22,9 +22,10 @@ Route::get('/logout', [AutentikasiController::class, 'logoutPage'])->name('logou
 
 Route::group(['middleware' => 'login'], function () {
     Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
-    Route::put('/verifikasi/{id}', [AdminController::class, 'verifikasiLaporan'])->name('verifikasi');
+    Route::get('/verifikasi/{id}', [AdminController::class, 'verifikasiLaporan'])->name('verifikasi');
     Route::get('/cetak', [AdminController::class, 'cetakLaporan'])->name('cetak');
     Route::get('/end_session', [AutentikasiController::class, 'logout'])->name('end_session');
+    Route::get('/laporan/export', [AdminController::class, 'export']);
 });
 
 Route::get('/', function () {

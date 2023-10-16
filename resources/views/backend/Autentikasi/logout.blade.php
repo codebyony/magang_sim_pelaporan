@@ -49,7 +49,7 @@
                                         <h5>You are Logged Out</h5>
                                         <p class="text-muted font-size-15">Thank you for using <span class="fw-semibold text-dark">Activ</span></p>
                                         <div class="mt-4">
-                                            <a href="/auth" class="btn btn-primary w-100 waves-effect waves-light">Sign In</a>
+                                            <a href="/login" class="btn btn-primary w-100 waves-effect waves-light">Sign In</a>
                                         </div>
                                     </div>
                                 </div>
