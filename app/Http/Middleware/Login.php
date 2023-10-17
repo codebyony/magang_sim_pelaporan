@@ -17,7 +17,7 @@ class Login
     public function handle(Request $request, Closure $next)
     {
         if(!session('isLogin')){
-            return redirect('/');
+            return redirect('/login');
         }
         return $next($request);
     }
