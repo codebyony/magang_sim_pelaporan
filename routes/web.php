@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AutentikasiController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\LaporanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,8 @@ Route::group(['middleware' => 'login'], function () {
     Route::get('/laporan/export', [AdminController::class, 'export']);
 });
 
-Route::get('/', function () {
-    return view('frontend.page-starter');
-});
+// Route::get('/', [LaporanController::class, 'index'])->name('Home');
+Route::resource('/', LaporanController::class);
+// Route::get('/', function () {
+//     return view('frontend.page-starter');
+// });

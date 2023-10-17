@@ -4,6 +4,7 @@
 <head>
   <!-- Basic -->
   <meta charset="utf-8" />
+  <title>Home</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -12,7 +13,7 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Mico</title>
+  {{-- <title>Mico</title> --}}
 
 
   <!-- bootstrap core css -->
@@ -253,35 +254,73 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <form>
+          <form action="/" method="post" enctype="multipart/form-data"> @csrf 
             <h4>
               Sampaikan <span>KELUHAN</span> Anda
             </h4>
+            {{-- <div class="form-row ">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-secondary">Left</button>
+                    <button type="button" class="btn btn-secondary">Middle</button>
+                    <button type="button" class="btn btn-secondary">Right</button>
+                </div>
+            </div> --}}
             <div class="form-row ">
+                <div class="form-group col-lg-12">
+                    <input type="text" name="NIP" class="form-control" placeholder="Masukkan Nip" /> @error('NIP') <code>
+                        {{ $message }}
+                      </code> @enderror
+                </div>
+                <div class="form-group col-lg-12">
+                    <input type="text" name="nama_karyawan" class="form-control" placeholder="Masukkan Nama" /> @error('nama_karyawan') <code>
+                        {{ $message }}
+                      </code> @enderror
+                </div>
               <div class="form-group col-lg-12">
-                <input type="text" class="form-control" id="inputPatientName" placeholder="Masukkan Nama">
-              </div>
-              <div class="form-group col-lg-12">
-                <input type="text" class="form-control" id="inputPatientName" placeholder="Masukkan Nip">
-              </div>
-              <div class="form-group col-lg-12">
-                <input type="text" class="form-control" id="inputPatientName" placeholder="Masukkan No WA">
+                <input type="text" class="form-control" name="nomor_wa" placeholder="Masukkan No WA"> @error('nomor_wa') <code>
+                    {{ $message }}
+                  </code> @enderror
               </div>
               <div class="form-group col-lg-12">
                 {{-- <label for="inputDoctorName">Doctor's Name</label> --}}
-                <select name="" class="form-control wide" id="inputDoctorName">
-                  <option value="Normal distribution ">Normal distribution </option>
-                  <option value="Normal distribution ">Normal distribution </option>
-                  <option value="Normal distribution ">Normal distribution </option>
+                <select name="divisi" class="form-control wide" id="inputDoctorName">
+                  <option value="Teknologi Informasi ">Teknologi Informasi </option>
+                  <option value="Akuntansi ">Akuntansi </option>
+                  <option value="HCM ">HCM </option>
+                  <option value="Pembendaharaan ">Pembendaharaan </option>
                 </select>
               </div>
               <div class="form-group col-lg-12">
-                <input type="text" class="form-control" id="inputPatientName" placeholder="Ketikkan Judul Keluhan Anda">
+                <select name="kategori" class="form-control wide" >
+                  <option value="Proses Bisnis ">Proses Bisnis </option>
+                  <option value="Management ">Management </option>
+                  <option value="Kebijakan ">Kebijakan </option>
+                  <option value="Peraturan Perusahaan ">Peraturan Perusahaan </option>
+                  <option value="Lingkungan Kerja ">Lingkungan Kerja </option>
+                </select>
+              </div>
+              <div class="form-group col-lg-12">
+                <input type="text" class="form-control" name="judul" placeholder="Ketikkan Judul Keluhan Anda"> @error('judul') <code>
+                    {{ $message }}
+                </code> @enderror
               </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-lg-12">
-                    <textarea name="" id="inputPatientName" rows="3" class="form-control" placeholder="Ketikkan Keluhan Anda"></textarea>
+                    <textarea name="isi" id="inputPatientName" rows="3" class="form-control" placeholder="Ketikkan Keluhan Anda"></textarea> @error('isi') <code>
+                        {{ $message }}
+                    </code> @enderror
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form_group col-lg-12">
+                    <input type="file" name="lampiran" class="form-control" id="formFile"
+                    accept="lampiran/*" onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])">
+                    @error('lampiran')
+                        <div class="alert alert-danger mt-2">
+                            {{ $message }}
+                        </div>
+                    @enderror 
                 </div>
             </div>
             {{-- <div class="file-upload-wrapper">
@@ -289,20 +328,20 @@
             </div> --}}
             <div class="form-row ">
                 <div class="custom-control custom-checkbox custom-control-inline">
-                    <input type="checkbox" class="custom-control-input" id="defaultInline1">
-                    <label class="custom-control-label" for="defaultInline1">Normal</label>
+                    <input type="checkbox" name="sifat" class="custom-control-input" id="normal">
+                    <label class="custom-control-label" for="normal">Normal</label>
                 </div>
                 <div class="custom-control custom-checkbox custom-control-inline">
-                    <input type="checkbox" class="custom-control-input" id="defaultInline2">
-                    <label class="custom-control-label" for="defaultInline2">Anonim</label>
+                    <input type="checkbox" class="custom-control-input" id="anonim">
+                    <label class="custom-control-label" for="anonim">Anonim</label>
                 </div>
                 <div class="custom-control custom-checkbox custom-control-inline">
-                    <input type="checkbox" class="custom-control-input" id="defaultInline3">
-                    <label class="custom-control-label" for="defaultInline3">Private</label>
+                    <input type="checkbox" class="custom-control-input" id="private">
+                    <label class="custom-control-label" for="private">Private</label>
                 </div>
             </div>
             <div class="btn-box">
-              <button type="submit" class="btn ">Submit Now</button>
+              <button type="submit" class="btn ">Lapor Keluhan</button>
             </div>
           </form>
         </div>
