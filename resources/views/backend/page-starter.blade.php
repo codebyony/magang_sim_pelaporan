@@ -70,7 +70,7 @@
             
                     </div>
 
-                    <div class="d-flex">
+                    <div class="d-flex"> 
 
                         <div class="dropdown d-none d-sm-inline-block">
                             <button type="button" class="btn header-item light-dark" id="mode-setting-btn">
