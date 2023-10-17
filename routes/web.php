@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AutentikasiController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\LaporanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,8 @@ Route::group(['middleware' => 'login'], function () {
     Route::get('/end_session', [AutentikasiController::class, 'logout'])->name('end_session');
 });
 
-Route::get('/', function () {
-    return view('frontend.page-starter');
-});
+// Route::get('/', [LaporanController::class, 'index'])->name('Home');
+Route::resource('/', LaporanController::class);
+// Route::get('/', function () {
+//     return view('frontend.page-starter');
+// });
