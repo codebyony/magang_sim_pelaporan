@@ -37,7 +37,7 @@ class LaporanController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
+        // dd($request);
         $validate = $request->validate([
             'NIP' => 'required|min:8|numeric',
             'nama_karyawan' => 'required',
@@ -48,21 +48,21 @@ class LaporanController extends Controller
             'lampiran' => 'required|image|file|max:1024',
             'nomor_wa' => 'required|numeric|min:11',
             'sifat' => 'required',
-            'status' => 'required',
         ]);
         
         $lampiran = $request->lampiran; 
         $slug = ($lampiran->getClientOriginalName());
         $new_lampiran = time() .'_'. $slug.'.' . $lampiran->getClientOriginalExtension();
-        $lampiran->move('uploads/kegiatan/' ,$new_lampiran);
+        $lampiran->move('uploads/laporans/' ,$new_lampiran);
         // dd($request->lampiran);
-        $validatedData['lampiran'] = 'uploads/laporan/'.$new_lampiran;
-        
-        $validate['status'] = "Belum di Verifikasi";
+        $validate['lampiran'] = 'uploads/laporans/'.$new_lampiran;
+        // $validate['sifat'] = "Normal";
+        $validate['status'] = "Belum Diverifikasi";
 
+        // dd($validate);
         Laporan::create($validate);
 
-        return redirect('/')->with('success','Data baru telah ditambahkan!');
+        return redirect('/')->with('laporan_success','Data baru telah ditambahkan!');
     }
 
     /**

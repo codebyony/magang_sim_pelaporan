@@ -31,6 +31,10 @@ Route::group(['middleware' => 'login'], function () {
 
 // Route::get('/', [LaporanController::class, 'index'])->name('Home');
 Route::resource('/', LaporanController::class);
-// Route::get('/', function () {
-//     return view('frontend.page-starter');
-// });
+Route::get('/contact', function () {
+    return view('frontend.contact');
+});
+
+Route::get('/coba', function () {
+    return view('frontend.contoh');
+});

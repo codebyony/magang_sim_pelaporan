@@ -32,84 +32,22 @@
 </head>
 
 <body>
-    <!-- Topbar Start -->
-    {{-- <div class="container-fluid">
-        <div class="row align-items-center py-2 px-lg-5">
-            <div class="col-lg-4">
-                <a href="" class="navbar-brand d-none d-lg-block">
-                    <h1 class="m-0 display-5 text-uppercase"><span class="text-primary">News</span>Room</h1>
-                </a>
-            </div>
-            <div class="contact-form bg-light col-lg-12 text-center">
-                <img width="200px" height="200px" class="img-fluid" src="assets/img/logo.png" alt="">
-                <div class="col-lg-12 text-center mb-3">
-                    <h5>Layanan Pelaporan Karyawan terhadap proses bisnis, aktivitas kerja, maupun keluhan yang ada pada di <span class="text-info">PT PAL </span></h5>
-                    <h1 class="m-0 display-5 text-uppercase"><span class="text-primary">Kami Mendengarkan : </span>Hubungi kami dengan keluhan anda</h1>
-                    <span class="text-primary">* Data ini dijamin Kerahasiaanya </span>
-                </div>
-            </div>
-            
-        </div>
-    </div> --}}
-    <!-- Topbar End -->
-
-
-    <!-- Navbar Start -->
-    {{-- <div class="container-fluid p-0 mb-3">
-        <nav class="navbar navbar-expand-lg bg-light navbar-light py-2 py-lg-0 px-lg-5">
-            <a href="" class="navbar-brand d-block d-lg-none">
-                <h1 class="m-0 display-5 text-uppercase"><span class="text-primary">News</span>Room</h1>
-            </a>
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
-                <div class="navbar-nav mr-auto py-0">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="/contact" class="nav-item nav-link">Contact</a>
-                </div>
-                <div class="input-group ml-auto" style="width: 100%; max-width: 300px;">
-                    <input type="text" class="form-control" placeholder="Keyword">
-                    <div class="input-group-append">
-                        <button class="input-group-text text-secondary"><i
-                                class="fa fa-search"></i></button>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </div> --}}
-    <!-- Navbar End -->
-
-
-    <!-- Breadcrumb Start -->
-    {{-- <div class="container-fluid">
-        <div class="container">
-            <nav class="breadcrumb bg-transparent m-0 p-0">
-                <a class="breadcrumb-item" href="#">Home</a>
-                <span class="breadcrumb-item active">Keluhan</span>
-            </nav>
-        </div>
-    </div> --}}
-    <!-- Breadcrumb End -->
-
-
     <!-- Contact Start -->
     <div class="container-fluid py-3">
         <div class="container">
-            <div class="contact-form bg-light col-lg-12 text-center">
-                <img width="200px" height="200px" class="img-fluid" src="assets/img/logo.png" alt="">
-                <div class="col-lg-12 text-center mb-3">
-                    <h5>Layanan Pelaporan Karyawan terhadap proses bisnis, aktivitas kerja, maupun keluhan yang ada pada di <span class="text-info">PT PAL </span></h5>
-                    <h1 class="m-0 display-5 text-uppercase"><span class="text-primary"><a href="/login" style="color: rgb(231, 40, 40); text-decoration=none">K</a>ami Mendengarkan : </span>Hubungi kami dengan keluhan anda</h1>
-                    <span class="text-primary">* Data ini dijamin Kerahasiaanya </span>
-                </div>
-            </div>
-            {{-- <div class="col-lg-12 text-center mb-3">
-                <h5>Layanan Pelaporan Karyawan terhadap proses bisnis, aktivitas kerja, maupun keluhan yang ada pada di <span class="text-info">PT PAL </span></h5>
-                <h1 class="m-0 display-5 text-uppercase"><span class="text-primary">Kami Mendengarkan : </span>Hubungi kami dengan keluhan anda</h1>
-                <span class="text-primary">* Data ini dijamin Kerahasiaanya </span>
-            </div> --}}
             <div class="row">
+                <div class="col-md-12">
+                    <div class="form-row bg-light mb-3">
+                        <div class="col-md-3 text-center">
+                            <img width="200px" height="200px" class="img-fluid" src="assets/img/logo.png" alt="">
+                        </div>
+                        <div class="col-md-9 text-align py-4">
+                            <h6>Layanan Pelaporan Karyawan terhadap proses bisnis, aktivitas kerja, maupun keluhan yang ada pada di <span class="text-info">PT PAL </span></h6>
+                            <h1 class="m-0 display-5 text-uppercase"><span class="text-primary"><a href="/login" style="color: rgb(231, 40, 40); text-decoration=none">K</a>ami Mendengarkan : </span>Hubungi kami dengan keluhan anda</h1>
+                            <span class="text-primary">* Data ini dijamin Kerahasiaanya </span>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-md-12">
                     <div class="contact-form bg-light mb-3" style="padding: 30px;">
                         {{-- <div class="col-lg-12 text-center mb-4">
@@ -290,7 +228,7 @@
     <!-- Footer Start -->
     <div class="container-fluid bg-light pt-5 px-sm-3 px-md-5">
         <div class="row">
-            <div class="col-lg-6 col-md-6 mb-6">
+            <div class="col-lg-6 col-md-6 mb-11">
                 <a href="index.html" class="navbar-brand">
                     <h1 class="mb-2 mt-n2 display-5 text-uppercase"><span class="text-primary">Informasi </span>SP PAL</h1>
                     <h1 class="mb-2 mt-n2 display-5 text-uppercase">Indonesia</h1>
