@@ -58,6 +58,7 @@ class LaporanController extends Controller
         $validate['lampiran'] = 'uploads/laporans/'.$new_lampiran;
         // $validate['sifat'] = "Normal";
         $validate['status'] = "Belum Diverifikasi";
+        $validate['progress'] = "Waiting";
 
         // dd($validate);
         Laporan::create($validate);

@@ -428,13 +428,41 @@
                     alertify.message("Berhasil Diverifikasi");
                 }
                 
-                document.querySelector("a#verifikasi").addEventListener("click", function(event) {
-                    event.stopPropagation(); // Prevent the click event from propagating to the parent tr
+                $(".verifikasi").on("click", function (event) {
+                    event.stopPropagation();
                 });
 
                 $('.dataTabel').DataTable();
 
+
+                // Dropdown Prevent Default
+
+                var selectFocused = false; // Variabel untuk melacak apakah elemen select sedang difokuskan
+
+                $(".progressSelect").on("click", function (event) {
+                    event.stopPropagation();
+                });
+                
+                $(".progressSelect").on("change", function (event) {
+                    var selectedValue = $(this).val();
+                    var id = $(this).attr("id");
+
+                    $.ajax({
+                        url: '/progress/' + id, // Ganti URL sesuai dengan rute yang sesuai di Laravel
+                        method: 'POST',
+                        data: {
+                            _token: '{{ csrf_token() }}',
+                            progress: selectedValue,
+                            // id: id,
+                        },
+                        success: function(response) {
+                            location.replace('/dashboard');
+                        }
+                    });
+                });
+
                 $(document).on("click", "table tbody tr", function(e) {
+
                     var item = $(e.currentTarget);
                     var NIP = item.data("nip");
                     var nama_karyawan = item.data("nama_karyawan");
@@ -447,6 +475,7 @@
                     var sifat = item.data("sifat");
                     var status = item.data("status");
                     var lampiran = item.data("lampiran");
+                    var progress = item.data("progress");
 
                     $('#nip').html(NIP);
                     $('#nama_karyawan').html(nama_karyawan);
@@ -459,6 +488,7 @@
                     $('#sifat').html(sifat);
                     $('#status').html(status);
                     $('#lampiran').html(lampiran);
+                    $('#progress').html(progress);
                     $('#modalDetail').modal("show");
                 })
             });

@@ -100,15 +100,10 @@
                 <img width="200px" height="200px" class="img-fluid" src="assets/img/logo.png" alt="">
                 <div class="col-lg-12 text-center mb-3">
                     <h5>Layanan Pelaporan Karyawan terhadap proses bisnis, aktivitas kerja, maupun keluhan yang ada pada di <span class="text-info">PT PAL </span></h5>
-                    <h1 class="m-0 display-5 text-uppercase"><span class="text-primary"><a href="/login" style="color: rgb(231, 40, 40); text-decoration=none">K</a>ami Mendengarkan : </span>Hubungi kami dengan keluhan anda</h1>
+                    <h1 class="m-0 display-5 text-uppercase"><span class="text-primary">Kami Mendengarkan : </span>Hubungi kami dengan keluhan anda</h1>
                     <span class="text-primary">* Data ini dijamin Kerahasiaanya </span>
                 </div>
             </div>
-            {{-- <div class="col-lg-12 text-center mb-3">
-                <h5>Layanan Pelaporan Karyawan terhadap proses bisnis, aktivitas kerja, maupun keluhan yang ada pada di <span class="text-info">PT PAL </span></h5>
-                <h1 class="m-0 display-5 text-uppercase"><span class="text-primary">Kami Mendengarkan : </span>Hubungi kami dengan keluhan anda</h1>
-                <span class="text-primary">* Data ini dijamin Kerahasiaanya </span>
-            </div> --}}
             <div class="row">
                 <div class="col-md-12">
                     <div class="contact-form bg-light mb-3" style="padding: 30px;">
@@ -118,8 +113,8 @@
                         <form action="/" method="POST" enctype="multipart/form-data"> @csrf
                             <div class="control-group text-center">
                                 <ul class="ks-cboxtags">
-                                    <li><input type="checkbox" id="Anonim" class="radio" value="Anonim" name="sifat"><label for="Anonim">Anonim</label></li>
-                                    <li><input type="checkbox" id="Private" class="radio" value="Private" name="sifat" checked><label for="Private">Private</label></li>
+                                    <li><input type="checkbox" id="Normal" class="radio" value="Normal" name="sifat"><label for="Normal">Normal</label></li>
+                                    <li><input type="checkbox" id="Anonim/Private" class="radio" value="Anonim/Private" name="sifat" checked><label for="Anonim/Private">Anonim/Private</label></li>
                                     <p class="help-block text-danger"></p>
                                     <span>**Jenis laporan Anonim/Private tidak akan ditampilkan di laporan manajemen, namun tetap isikan Nama Asli</span>
                                 </ul>
@@ -290,22 +285,19 @@
     <!-- Footer Start -->
     <div class="container-fluid bg-light pt-5 px-sm-3 px-md-5">
         <div class="row">
-            <div class="col-lg-6 col-md-6 mb-6">
+            <div class="col-lg-12 col-md-6 mb-6 text-center">
                 <a href="index.html" class="navbar-brand">
-                    <h1 class="mb-2 mt-n2 display-5 text-uppercase"><span class="text-primary">Informasi </span>SP PAL</h1>
-                    <h1 class="mb-2 mt-n2 display-5 text-uppercase">Indonesia</h1>
+                    <h1 class="mb-4 mt-n2 display-5 text-uppercase"><span class="text-primary">Informasi </span>SP PAL Indonesia</h1>
                 </a>
-                <p>Gedung Divisi Supply Chain PT PAL Indonesia-Ujung Surabaya (60155)</p>
-                <p>Telp: (031) 3292275 EXT: 555 Fax: (031) 3286348</p>
-                <div class="d-flex justify-content-start mt-4">
-                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-instagram"></i></a>
-                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-youtube"></i></a>
-                </div>
+                <p><a href="/login" style="color: rgb(116, 116, 116); text-decoration=none">G</a>edung Divisi Supply Chain PT PAL Indonesia-Ujung Surabaya (60155)</p><br>
+                <p>Telp: (031) 3292275 EXT: 555 Fax: (031) 3286348</p><br>
+                <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;" href="https://www.instagram.com/ptpal_indonesia/"><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-youtube"></i></a>
             </div>
-            <div class="col-lg-3 col-md-6 mb-4">
+            {{-- <div class="col-lg-3 col-md-6 mb-4">
                 <h4 class="font-weight-bold mb-4">Tags</h4>
                 <div class="d-flex flex-wrap m-n1">
                     <a href="" class="btn btn-sm btn-outline-secondary m-1">Politics</a>
@@ -331,7 +323,7 @@
                     <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right text-dark mr-2"></i>Terms & conditions</a>
                     <a class="text-secondary" href="#"><i class="fa fa-angle-right text-dark mr-2"></i>Contact</a>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
     <!-- Footer End -->

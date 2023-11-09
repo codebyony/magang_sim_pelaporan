@@ -30,6 +30,15 @@ class AdminController extends Controller
         return redirect('/dashboard');
     }
 
+    // Ganti Progress
+    public function gantiProgress($id, Request $request){
+        $laporan = Laporan::where('id', $id)->first();
+    	$laporan->progress = $request->progress;
+        $laporan->update();
+
+        session()->flash('successs', 'Data updated successfully');
+    }
+
     public function export(){
         return Excel::download(new LaporanExport, 'laporanKritikSaran.xlsx');
     }

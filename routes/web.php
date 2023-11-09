@@ -24,6 +24,7 @@ Route::get('/logout', [AutentikasiController::class, 'logoutPage'])->name('logou
 Route::group(['middleware' => 'login'], function () {
     Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
     Route::get('/verifikasi/{id}', [AdminController::class, 'verifikasiLaporan'])->name('verifikasi');
+    Route::post('/progress/{id}', [AdminController::class, 'gantiProgress'])->name('progress');
     Route::get('/cetak', [AdminController::class, 'cetakLaporan'])->name('cetak');
     Route::get('/end_session', [AutentikasiController::class, 'logout'])->name('end_session');
     Route::get('/laporan/export', [AdminController::class, 'export']);

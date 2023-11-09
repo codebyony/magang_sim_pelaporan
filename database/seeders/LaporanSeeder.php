@@ -27,6 +27,7 @@ class LaporanSeeder extends Seeder
                 'nomor_wa' => '081293839849',
                 'sifat' => 'Normal',
                 'status' => 'Belum Diverifikasi',
+                'progress' => 'Waiting',
             ],
             [
                 'NIP' => '11829817382',
@@ -39,6 +40,7 @@ class LaporanSeeder extends Seeder
                 'nomor_wa' => '089828918291',
                 'sifat' => 'Rahasia',
                 'status' => 'Diverifikasi',
+                'progress' => 'Process',
             ],
         ]);
     }

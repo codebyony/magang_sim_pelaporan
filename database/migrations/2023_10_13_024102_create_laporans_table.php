@@ -24,7 +24,8 @@ return new class extends Migration
             $table->string('lampiran');
             $table->string('nomor_wa');
             $table->string('sifat');
-            $table->string('status');
+            $table->string('status'); // Diverifikasi | Belum Verifikasi
+            $table->string('progress'); // Waiting | Process | Finish 
             $table->timestamps();
         });
     }

@@ -10,6 +10,6 @@ class Laporan extends Model
     use HasFactory;
 
     protected $fillable = [
-        'NIP', 'nama_karyawan', 'divisi', 'judul', 'isi', 'kategori', 'lampiran', 'nomor_wa', 'sifat', 'status'
+        'NIP', 'nama_karyawan', 'divisi', 'judul', 'isi', 'kategori', 'lampiran', 'nomor_wa', 'sifat', 'status', 'progress'
     ];
 }

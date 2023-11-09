@@ -29,8 +29,8 @@
 				</a>
 			</div>
 			<!-- end card header -->
-			<div class="card-body">
-				<table class="display dataTabel table-hover table-stripped">
+			<div class="card-body table-responsive">
+				<table class="display dataTabel table-hover table-stripped table-responsive">
 					<thead>
 						<tr>
 							<th>Pelapor</th>
@@ -38,6 +38,7 @@
 							<th>Isi Kritik/Saran</th>
 							<th>Kontak</th>
 							<th>Status</th>
+							<th>Progress</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -53,6 +54,7 @@
                 data-nomor_wa="{{ $i->nomor_wa }}"
                 data-status="{{ $i->status }}"
                 data-sifat="{{ $i->sifat }}"
+                data-progress="{{ $i->progress }}"
               >
 							<td> {{ $i->NIP }} <br>
 								<b>{{ $i->nama_karyawan }}</b><br/>
@@ -63,12 +65,19 @@
 							</td>
 							<td>{{ mb_strimwidth($i->isi, 0, 60, "..."); }}</td>
 							<td>{{ $i->nomor_wa }}</td>
-							<td><a id="verifikasi" href="@if($i->status == 'Belum Diverifikasi') /verifikasi/{{ $i->id }} @else javascript:void(0) @endif">
+							<td><a class="verifikasi" href="@if($i->status == 'Belum Diverifikasi') /verifikasi/{{ $i->id }} @else javascript:void(0) @endif">
                 <button type="button" class=" {{ ($i->status == "Belum Diverifikasi") ? 'btn btn-warning btn-sm':'btn btn-primary btn-sm disabled' }} ">
 								{{ ($i->status == "Belum Diverifikasi") ? 'Verifikasi':'Diverifikasi' }}
 								</button>
                 </a>
 							</td>
+              <td>
+                <select class="btn btn-sm btn-primary progressSelect" id="{{ $i->id }}">
+                  <option value="Waiting" {{ $i->progress == 'Waiting' ? 'selected' : '' }}>Waiting</option>
+                  <option value="Process" {{ $i->progress == 'Process' ? 'selected' : '' }}>Process</option>
+                  <option value="Finish" {{ $i->progress == 'Finish' ? 'selected' : '' }}>Finish</option>
+                </select>
+              </td>
 						  </tr> @endforeach
 					</tbody>
 				</table>
@@ -120,6 +129,10 @@
               <tr>
                 <th>Sifat</th>
                 <td id="sifat"></td>
+              </tr>
+              <tr>
+                <th>Progress</th>
+                <td id="progress"></td>
               </tr>
             </table>
           </div>
