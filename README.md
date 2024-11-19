@@ -27,3 +27,14 @@ Laravel, blade, MySQL
 ## Screenshot
 > Halaman Depan
 <img src="https://github.com/codebyony/magang_sim_pelaporan/blob/e318e605f7e80265882bfe8ff89239c504cdb75d/public/assets/img/screenshot/Laporan1.png">
+
+> Halaman Admin (Bagian 1 - Login)
+<img src="https://github.com/codebyony/magang_sim_pelaporan/blob/e318e605f7e80265882bfe8ff89239c504cdb75d/public/assets/img/screenshot/Laporan2.png">
+
+> Halaman Admin (Bagian 2 - Data Laporan)
+<img src="https://github.com/codebyony/magang_sim_pelaporan/blob/e318e605f7e80265882bfe8ff89239c504cdb75d/public/assets/img/screenshot/Laporan3.png">
+
+> Halaman Admin (Bagian 3 - Upload Data Karyawan)
+<img src="https://github.com/codebyony/magang_sim_pelaporan/blob/e318e605f7e80265882bfe8ff89239c504cdb75d/public/assets/img/screenshot/Laporan4.png">
+
+
