@@ -25,4 +25,5 @@ Laravel, blade, MySQL
 3. Penggunaan gambar dan artikel dari website resmi perusahaan bertujuan untuk menjaga konsistensi visual dengan identitas perusahaan.
 
 ## Screenshot
-
+> Halaman Depan
+<img src="https://github.com/codebyony/magang_sim_pelaporan/blob/e318e605f7e80265882bfe8ff89239c504cdb75d/public/assets/img/screenshot/Laporan1.png">
