@@ -26,15 +26,15 @@ Laravel, blade, MySQL
 
 ## Screenshot
 > Halaman Depan
-<img src="https://github.com/onynovianti/magang_sim_keluhan/blob/ec25d05e9664713b4dfe2bbecc7716dc060dba2f/public/assets/img/screenshot_/Laporan1.png">
+<img src="https://github.com/codebyony/magang_sim_pelaporan/blob/91e14673041169088b27cb7b88f2bd6257df7cfe/public/assets/img/screenshot_/Laporan1.png">
 
 > Halaman Admin (Bagian 1 - Login)
-<img src="https://github.com/onynovianti/magang_sim_keluhan/blob/ec25d05e9664713b4dfe2bbecc7716dc060dba2f/public/assets/img/screenshot_/Laporan2.png">
+<img src="https://github.com/codebyony/magang_sim_pelaporan/blob/91e14673041169088b27cb7b88f2bd6257df7cfe/public/assets/img/screenshot_/Laporan2.png">
 
 > Halaman Admin (Bagian 2 - Data Laporan)
-<img src="https://github.com/onynovianti/magang_sim_keluhan/blob/ec25d05e9664713b4dfe2bbecc7716dc060dba2f/public/assets/img/screenshot_/Laporan3.png">
+<img src="https://github.com/codebyony/magang_sim_pelaporan/blob/91e14673041169088b27cb7b88f2bd6257df7cfe/public/assets/img/screenshot_/Laporan3.png">
 
 > Halaman Admin (Bagian 3 - Upload Data Karyawan)
-<img src="https://github.com/onynovianti/magang_sim_keluhan/blob/ec25d05e9664713b4dfe2bbecc7716dc060dba2f/public/assets/img/screenshot_/Laporan4.png">
+<img src="https://github.com/codebyony/magang_sim_pelaporan/blob/91e14673041169088b27cb7b88f2bd6257df7cfe/public/assets/img/screenshot_/Laporan4.png">
 
 
