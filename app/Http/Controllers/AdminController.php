@@ -9,9 +9,14 @@ use App\Models\Laporan;
 use Illuminate\Support\Facades\Auth;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Exports\LaporanExport;
+use App\Imports\KaryawanImport;
 
 class AdminController extends Controller
 {
+    public function __construct() {
+        $this->middleware('login');
+    }
+
     // Buka Halaman Login
     public function index(){
         return view('backend.Laporan.laporan',[
@@ -41,5 +46,28 @@ class AdminController extends Controller
 
     public function export(){
         return Excel::download(new LaporanExport, 'laporanKritikSaran.xlsx');
+    }
+
+    // UPLOAD EXCEL
+
+    // Interface Upload
+    public function uploadInterface(){
+        return view('backend.Excel.index',[
+            'judul' => 'Tambah Data Karyawan'
+        ]);
+    }
+
+    // Upload File
+    public function uploadFile(Request $request){
+        ini_set('max_execution_time', 600);
+        try {
+            Excel::import(new KaryawanImport, request()->file('file'));
+            session()->flash('upload_success', 'Data uploaded successfully');
+        } catch (\Exception $e) {
+            // Log the exception or dump it for debugging
+            \Log::error($e->getMessage());
+            dd($e);
+        }
+        return redirect('/dashboard');
     }
 }

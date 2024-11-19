@@ -15,7 +15,22 @@ class LaporanController extends Controller
     public function index()
     {
         return view('frontend.page-starter', [
-            'laporan' => Laporan::all()
+            'laporan' => Laporan::all(),
+        ]);
+    }
+
+    public function show($id)
+    {
+        return view('frontend.page-starter', [
+            'laporan' => Laporan::all(),
+            'jumlah' => Laporan::where('NIP', '=', $id)->count(),
+        ]);
+    }
+
+    public function tabel($id)
+    {
+        return view('frontend.laporan', [
+            'tabel' => Laporan::where('NIP', '=', $id)->get()
         ]);
     }
 
@@ -63,7 +78,7 @@ class LaporanController extends Controller
         // dd($validate);
         Laporan::create($validate);
 
-        return redirect('/')->with('laporan_success','Data baru telah ditambahkan!');
+        return redirect('/laporan/'.$request->session()->get('NIP'))->with('laporan_success','Data baru telah ditambahkan!');
     }
 
     /**
@@ -72,10 +87,10 @@ class LaporanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
-    }
+    // public function show($id)
+    // {
+    //     //
+    // }
 
     /**
      * Show the form for editing the specified resource.

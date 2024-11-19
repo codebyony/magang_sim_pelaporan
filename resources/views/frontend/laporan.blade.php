@@ -17,6 +17,7 @@
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <!-- Libraries Stylesheet -->
     <link href="{{ asset('assets/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
@@ -32,66 +33,6 @@
 </head>
 
 <body>
-    <!-- Topbar Start -->
-    {{-- <div class="container-fluid">
-        <div class="row align-items-center py-2 px-lg-5">
-            <div class="col-lg-4">
-                <a href="" class="navbar-brand d-none d-lg-block">
-                    <h1 class="m-0 display-5 text-uppercase"><span class="text-primary">News</span>Room</h1>
-                </a>
-            </div>
-            <div class="contact-form bg-light col-lg-12 text-center">
-                <img width="200px" height="200px" class="img-fluid" src="assets/img/logo.png" alt="">
-                <div class="col-lg-12 text-center mb-3">
-                    <h5>Layanan Pelaporan Karyawan terhadap proses bisnis, aktivitas kerja, maupun keluhan yang ada pada di <span class="text-info">PT PAL </span></h5>
-                    <h1 class="m-0 display-5 text-uppercase"><span class="text-primary">Kami Mendengarkan : </span>Hubungi kami dengan keluhan anda</h1>
-                    <span class="text-primary">* Data ini dijamin Kerahasiaanya </span>
-                </div>
-            </div>
-            
-        </div>
-    </div> --}}
-    <!-- Topbar End -->
-
-
-    <!-- Navbar Start -->
-    {{-- <div class="container-fluid p-0 mb-3">
-        <nav class="navbar navbar-expand-lg bg-light navbar-light py-2 py-lg-0 px-lg-5">
-            <a href="" class="navbar-brand d-block d-lg-none">
-                <h1 class="m-0 display-5 text-uppercase"><span class="text-primary">News</span>Room</h1>
-            </a>
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
-                <div class="navbar-nav mr-auto py-0">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="/contact" class="nav-item nav-link">Contact</a>
-                </div>
-                <div class="input-group ml-auto" style="width: 100%; max-width: 300px;">
-                    <input type="text" class="form-control" placeholder="Keyword">
-                    <div class="input-group-append">
-                        <button class="input-group-text text-secondary"><i
-                                class="fa fa-search"></i></button>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </div> --}}
-    <!-- Navbar End -->
-
-
-    <!-- Breadcrumb Start -->
-    {{-- <div class="container-fluid">
-        <div class="container">
-            <nav class="breadcrumb bg-transparent m-0 p-0">
-                <a class="breadcrumb-item" href="#">Home</a>
-                <span class="breadcrumb-item active">Keluhan</span>
-            </nav>
-        </div>
-    </div> --}}
-    <!-- Breadcrumb End -->
-
 
     <!-- Contact Start -->
     <div class="container-fluid py-3">
@@ -107,131 +48,90 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="contact-form bg-light mb-3" style="padding: 30px;">
-                        <form action="/laporan" method="POST" enctype="multipart/form-data"> @csrf
-                            <div class="control-group text-center">
-                                <ul class="ks-cboxtags">
-                                    <li><input type="checkbox" id="Normal" class="radio" value="Normal" name="sifat"><label for="Normal">Normal</label></li>
-                                    <li><input type="checkbox" id="Anonim/Private" class="radio" value="Anonim/Private" name="sifat" checked><label for="Anonim/Private">Anonim/Private</label></li>
-                                    <p class="help-block text-danger"></p>
-                                    <span>**Jenis laporan Anonim/Private tidak akan ditampilkan di laporan manajemen, namun tetap isikan Nama Asli</span>
-                                </ul>
-                            </div>
-                            <div class="form-row">
-                                <div class="col-md-6">
-                                    <div class="control-group">
-                                        <input type="text" class="form-control p-4" id="NIP" name="NIP" value="{{ session()->get('NIP') }}" /> @error('karyawan_nip') <code>
-                                          {{ $massage }}
-                                        </code>
-                                        @enderror
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="control-group">
-                                        <input type="text" class="form-control p-4" id="nama_karyawan" placeholder="Name" name="nama_karyawan" value="{{ session()->get('nama') }}" /> @error('nama_karyawan') <code>
-                                          {{ $massage }}
-                                        </code>
-                                        @enderror
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control p-4" id="nomor_wa" placeholder="Nomer WA / Ext" name="nomor_wa" />@error('nomor_wa') <code>
-                                        {{ $massage }}
-                                      </code>
-                                      @enderror
-                                      <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="control-group">
-                                        <input type="text" class="form-control p-4" id="divisi" placeholder="Name" name="divisi" value="{{ session()->get('divisi') }}" /> @error('divisi') <code>
-                                          {{ $massage }}
-                                        </code>
-                                        @enderror
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                              <label for="inputKategori">Kategori Keluhan</label>
-                              <select name="kategori" class="form-control wide" >
-                                <option value="Proses Bisnis ">Proses Bisnis </option>
-                                <option value="Management ">Management </option>
-                                <option value="Kebijakan ">Kebijakan </option>
-                                <option value="Peraturan Perusahaan ">Peraturan Perusahaan </option>
-                                <option value="Lingkungan Kerja ">Lingkungan Kerja </option>
-                              </select>
-                              <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="control-group">
-                              <input type="text" class="form-control p-4" id="judul" placeholder="Judul Keluhan" name="judul" />@error('judul') <code>
-                                {{ $massage }}
-                              </code>
-                              @enderror
-                              <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="control-group">
-                                <textarea class="form-control" rows="4" id="isi" placeholder="Isi Keluhan" name="isi"></textarea>@error('isi') <code>
-                                  {{ $massage }}
-                                </code>
-                                @enderror
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            {{-- <div class="control-group">
-                                <h3>Upload Files</h3>
-                                <div class="drop_box">
-                                  <header>
-                                    <h4>Select File here</h4>
-                                  </header>
-                                  <p>Files Supported: PDF, TEXT, DOC , DOCX</p>
-                                  <input type="file" name="lampiran" class="form-control" id="formFile"
-                                  accept="lampiran/*" onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])">
-                                  @error('lampiran')
-                                      <div class="alert alert-danger mt-2">
-                                          {{ $message }}
-                                      </div>
-                                  @enderror 
-                                  <button class="btn">Choose File</button>
-                                </div>
-                              <p class="help-block text-danger"></p>
-                            </div> --}}
-                            <div class="control-group">
-                              <input type="file" name="lampiran" class="form-control" id="formFile"
-                                accept="lampiran/*" onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])">
-                                @error('lampiran')
-                                    <div class="alert alert-danger mt-2">
-                                        {{ $message }}
-                                    </div>
-                                @enderror 
-                                <span style="color:red">*masukkan gambar</span>
-                              <p class="help-block text-danger"></p>
-                            </div>
-                            <div>
-                                <button class="btn btn-primary font-weight-semi-bold px-4" style="height: 50px;" type="submit" id="sendMessageButton">Send Message</button>
-                            </div>
-                        </form>
+                            <a href="/laporan/{{ session()->get('NIP') }}" style="color: rgb(0, 0, 0); text-decoration=none"><i class='fas fa-angle-left'>Back</i></a>
+                        <div class="col-lg-12 text-center mb-3">
+                            <h5>Daftar Laporan Masuk</h5>
+                        </div>
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">Judul</th>
+                                <th scope="col">Keluhan</th>
+                                <th scope="col">Status</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($tabel as $i) 
+                                    <tr
+                                        data-nip={{ $i->NIP }} 
+                                        data-nama_karyawan="{{ $i->nama_karyawan }}"
+                                        data-divisi="{{ $i->divisi }}"
+                                        data-judul="{{ $i->judul }}"
+                                        data-isi="{{ $i->isi }}"
+                                        data-kategori="{{ $i->kategori }}"
+                                        data-lampiran="{{ $i->lampiran }}"
+                                        data-nomor_wa="{{ $i->nomor_wa }}"
+                                        data-status="{{ $i->status }}"
+                                        data-sifat="{{ $i->sifat }}"
+                                        data-progress="{{ $i->progress }}"
+                                    >
+                                        <td>{{$loop->iteration}}</td>
+                                        <td>{{ $i->judul }}</td>
+                                        <td>{{ $i->isi }}</td>
+                                        <td>{{ $i->status }}</td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                          </table>
                     </div>
                 </div>
             </div>
-            <section id="statistic" class="statistic-section one-page-section">
-                <div class="container">
-                    <div class="row text-center">
-                        <div class="col-xs-12 col-md-12">
-                            <div class="counter">
-                                {{-- <i class="fa fa-code fa-2x stats-icon"></i> --}}
-                                <h2 class="timer count-title count-number">{{ $jumlah }}</h2>
-                                <p class="stats-text"><a href="/tabel/{{ session()->get('NIP') }}" style="color: rgb(255, 255, 255); text-decoration=none">Jumlah Laporan Masuk</a></p>
-                                {{-- <div class="stats-line-black"></div> --}}
-                                <a type="button" class="btn btn-danger" href="/end">Logout</a>
-                                {{-- <a type="button" class="btn btn-light">Logout</button> --}}
-                                {{-- <p class="stats-text"><a href="/end">Logout</a></p> --}}
-                            </div>
-                        </div>
+            <div class="modal fade" id="modalDetail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">
+                        <span id="nama_karyawan"></span> - <span id="nip"></span>
+                      </h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
+                    <form>
+                      <div class="modal-body table-responsive">
+                        <table class="table table-nowrap mb-0 table-responsive">
+                          <tr>
+                            <th>Divisi</th>
+                            <td id="divisi"></td>
+                          </tr>
+                          <tr>
+                            <th>Nomor WA</th>
+                            <td id="nomor_wa"></td>
+                          </tr>
+                          <tr>
+                            <th>Kategori</th>
+                            <td id="kategori"></td>
+                          </tr>
+                          <tr>
+                            <th>Progress</th>
+                            <td id="progress"></td>
+                          </tr>
+                          <tr>
+                            <th>Judul</th>
+                            <td id="judul"></td>
+                          </tr>
+                          <tr>
+                            <th>Isi</th>
+                            <td id="isi"></td>
+                          </tr>
+                        </table>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                      </div>
+                    </form>
+                  </div>
                 </div>
-            </section>
+            </div>
             <div class="d-flex align-items-center justify-content-between bg-light py-2 px-4 mb-3 mt-3">
                 <h3 class="m-0">Informasi PT PAL</h3>
                 <a class="text-secondary font-weight-medium text-decoration-none" href="">View All</a>
@@ -372,6 +272,41 @@
             if (successMessage) {
                 alertify.message("Data Berhasil Ditambahkan");
             }
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready( function () {
+            
+            $(document).on("click", "table tbody tr", function(e) {
+
+                var item = $(e.currentTarget);
+                var NIP = item.data("nip");
+                var nama_karyawan = item.data("nama_karyawan");
+                var divisi = item.data("divisi");
+                var judul = item.data("judul");
+                var isi = item.data("isi");
+                var kategori = item.data("kategori");
+                var lampiran = item.data("lampiran");
+                var nomor_wa = item.data("nomor_wa");
+                var sifat = item.data("sifat");
+                var status = item.data("status");
+                var lampiran = item.data("lampiran");
+                var progress = item.data("progress");
+
+                $('#nip').html(NIP);
+                $('#nama_karyawan').html(nama_karyawan);
+                $('#divisi').html(divisi);
+                $('#judul').html(judul);
+                $('#isi').html(isi);
+                $('#kategori').html(kategori);
+                $('#lampiran').attr("src", lampiran);
+                $('#nomor_wa').html(nomor_wa);
+                $('#sifat').html(sifat);
+                $('#status').html(status);
+                $('#lampiran').html(lampiran);
+                $('#progress').html(progress);
+                $('#modalDetail').modal("show");
+            })
         });
     </script>
 </body>

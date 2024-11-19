@@ -26,6 +26,11 @@
         <link href="{{ asset('assets/back/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
         <!-- App Css-->
         <link href="{{ asset('assets/back/css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css" />
+        
+
+        <!-- Plugins css -->
+        <link href="{{ asset('assets/back/libs/dropzone/min/dropzone.min.css') }}" rel="stylesheet" type="text/css" />
+
         <style>
         table tr {
             cursor: pointer;
@@ -134,9 +139,16 @@
                             <li class="menu-title" data-key="t-menu">Menu</li>
 
                             <li>
-                                <a href="index.html">
-                                    <i class="bx bx-tachometer icon nav-icon"></i>
+                                <a href="/dashboard">
+                                    <i class="bx bx-spreadsheet icon nav-icon"></i>
                                     <span class="menu-item" data-key="t-dashboards">Laporan</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/upload">
+                                    <i class="bx bx bx-upload icon nav-icon"></i>
+                                    <span class="menu-item" data-key="t-dashboards">Upload Data</span>
                                 </a>
                             </li>
 
@@ -182,8 +194,15 @@
                                         <li class="nav-item">
                                             <a class="nav-link dropdown-toggle arrow-none" href="/dashboard" id="topnav-dashboard" role="button"
                                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class='bx bx-tachometer'></i>
+                                                <i class='bx bx-spreadsheet'></i>
                                                 <span data-key="t-dashboards">Laporan</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link dropdown-toggle arrow-none" href="/upload" id="topnav-dashboard" role="button"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class='bx bx bx-upload'></i>
+                                                <span data-key="t-dashboards">Upload Data</span>
                                             </a>
                                         </li>
         
@@ -418,14 +437,21 @@
         <script src="{{ asset('assets/back/libs/metismenujs/metismenujs.min.js') }}"></script>
         <script src="{{ asset('assets/back/libs/simplebar/simplebar.min.js') }}"></script>
         <script src="{{ asset('assets/back/libs/feather-icons/feather.min.js') }}"></script>
+        <!-- Plugins js -->
+        {{-- <script src="{{ asset('assets/back/libs/dropzone/min/dropzone.min.js') }}"></script> --}}
 
         <script src="{{ asset('assets/back/js/app.js') }}"></script>
         <script type="text/javascript">
             $(document).ready( function () {
                 var successMessage = "{{ session('success_message') }}";
+                var successMessageFile = "{{ session('upload_success') }}";
                 
                 if (successMessage) {
                     alertify.message("Berhasil Diverifikasi");
+                }
+
+                if (successMessageFile) {
+                    alertify.message("Data Karyawan Berhasil Di import");
                 }
                 
                 $(".verifikasi").on("click", function (event) {

@@ -63,4 +63,47 @@ class AutentikasiController extends Controller
             'title' => 'Halaman Logout'
         ]);
     }
+
+    // Buka Halaman Login Karyawan
+    public function uindex(){
+        return view('backend.Autentikasi.loginKaryawan',[
+            'title' => 'Halaman Login'
+        ]);
+    }
+
+    // Auth Karyawan
+    public function ustore(Request $request){
+        $validatedData=$request->validate([
+            'NIP' => 'required',
+            'password' => 'required'
+        ]);
+
+        //jika username ada
+        $user = DB::table('karyawans')->where('NIP', $request->NIP)->first();
+
+        //jika password benar
+        if($user){
+            if(Hash::check($request->password,$user->password)){
+                session([
+                    'Login' => true,
+                    'NIP' => $user->NIP,
+                    'nama' => $user->nama,
+                    'divisi' => $user->divisi,
+                    ]);
+                // return redirect('/'.$request->role);
+                return redirect('/laporan/'.$request->session()->get('NIP'));
+            }
+            //jika password salah
+            return redirect('/auten')->with('error_password', 'Password Tidak Sesuai');
+        }
+        
+        //jika username tidak ada
+        return redirect('/auten')->with('error_username', 'Username Tidak Ditemukan');
+    }
+
+    // Logout
+    public function ulogout(){
+        session()->flush();
+        return redirect('/');
+    }
 }
